@@ -6,8 +6,8 @@
  */
 export function sortStrings(arr, param = 'asc') {
   if (param === 'asc') {
-    return arr.concat().sort(new Intl.Collator(undefined, {caseFirst: 'upper' } ).compare);
-  } else if (param === 'desc') {
-    return arr.concat().sort(new Intl.Collator(undefined, {caseFirst: 'lower' } ).compare).reverse();
+    return arr.concat().sort(new Intl.Collator(['ru','en'], {caseFirst: 'upper' } ).compare);
+  } else if (param === 'desc') {''
+    return arr.concat().sort(new Intl.Collator(['ru','en'], {caseFirst: 'lower' } ).compare).reverse();
   }
 }
