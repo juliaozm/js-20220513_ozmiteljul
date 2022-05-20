@@ -5,5 +5,9 @@
  * @returns {string[]}
  */
 export function sortStrings(arr, param = 'asc') {
-
+  if (param === 'asc') {
+    return arr.concat().sort(new Intl.Collator(undefined, {caseFirst: 'upper' } ).compare);
+  } else if (param === 'desc') {
+    return arr.concat().sort(new Intl.Collator(undefined, {caseFirst: 'lower' } ).compare).reverse();
+  }
 }
